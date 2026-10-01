@@ -1,0 +1,52 @@
+{
+  "name": "@gbesse/jev-agribalyse-claim-check",
+  "version": "0.1.0",
+  "description": "Vérifie si une allégation environnementale alimentaire est soutenue par la référence AGRIBALYSE citée.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    },
+    "./jev": {
+      "types": "./src/jev.d.mts",
+      "import": "./src/jev.mjs"
+    }
+  },
+  "bin": {
+    "jev-agribalyse-claim-check": "./bin/jev-agribalyse-claim-check.mjs"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "typecheck": "tsc --noEmit --strict --target ES2022 --module NodeNext docs/public-api-types.mts",
+    "test": "node --test",
+    "demo": "node examples/demo.mjs && node examples/cas-limite.mjs && node examples/revue-humaine.mjs",
+    "demo:principal": "node examples/demo.mjs",
+    "demo:limite": "node examples/cas-limite.mjs",
+    "demo:revue": "node examples/revue-humaine.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbesse/jev-agribalyse-claim-check.git"
+  },
+  "keywords": [
+    "jev",
+    "typesafe-ai",
+    "france",
+    "open-data"
+  ],
+  "files": [
+    "src",
+    "bin",
+    "docs",
+    "examples",
+    "scripts"
+  ]
+}
