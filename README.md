@@ -2,7 +2,7 @@
 
 **Vérifie si une allégation environnementale alimentaire est soutenue par la référence AGRIBALYSE citée.**
 
-[![Tests](https://github.com/gbesse/jev-agribalyse-claim-check/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-agribalyse-claim-check/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.0 · Documentation française
+[![Tests](https://github.com/gbesse/jev-agribalyse-claim-check/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-agribalyse-claim-check/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.1 · Documentation française
 
 Jev AGRIBALYSE Claim Check transforme un allégation environnementale sourcé en une catégorie explicite et révisable. Le dépôt sépare les règles vérifiables en code de la comparaison sémantique confiée à Jev.
 
@@ -70,6 +70,12 @@ TYPESAFE_API_KEY=... node scripts/live-smoke.mjs
 ```
 
 N’envoyez jamais de secret, de donnée personnelle ni de dossier sensible non expurgé. Calibrez les seuils sur un corpus français annoté avant tout usage opérationnel.
+
+## Parcours comparatif
+
+`npm run demo:parcours` produit un rapport JSON partageable pour **jev-agribalyse-claim-check** : le scénario principal et la frontière déterministe, ainsi que la revue humaine. Chaque scénario garde sa sortie propre et échoue si son assertion ne passe plus. Les données et probabilités sont synthétiques ; aucun appel Jev n’est effectué.
+
+Cette vue permet de comparer rapidement les chemins de décision et de choisir quel exemple adapter à vos propres données sourcées.
 
 ## Validation
 
